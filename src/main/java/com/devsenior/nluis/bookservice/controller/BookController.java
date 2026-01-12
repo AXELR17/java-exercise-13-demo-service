@@ -22,8 +22,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/api/books")
 public class BookController {  //Servicio RESTful
     
-    @Autowired
-    private BookService bookservice;
+    //@Autowired
+    //private BookService bookservice;
+ 
+    private final BookService bookservice;
+
+    public BookController(BookService bookService) {
+        this.bookservice = bookService;
+    }
+    
+ 
 
 
 
